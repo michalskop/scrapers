@@ -157,6 +157,9 @@ if (isset($_REQUEST['name']))
     $scraper->name = $_REQUEST['name'];
 if (isset($_REQUEST['description']))
     $scraper->description = $_REQUEST['description'];
+if (isset($_REQUEST['url']))
+    $scraper->name = $_REQUEST['url'];
+    
     //note: 2015-04-29T15:16:55Z
 
 if (isset($_REQUEST['date']) and (check_time($_REQUEST['date'])))

@@ -51,8 +51,10 @@ usort($scrapers, 'sort_objects');
                             <?php if ($scraper->last_status == 'ok') echo('success'); elseif ($scraper->last_status == 'failed') echo('danger'); ?>                 
                         ">
                             <td>
+                                <?php if (isset($scraper->url)) echo("<a href='".$scraper->url."'>"); ?>
                                 <?php if (isset($scraper->name)) echo($scraper->name); else echo ($scraper->id); ?>
                                 <?php if (isset($scraper->description)) echo("<br><small>".$scraper->description."</small>"); ?>
+                                <?php if (isset($scraper->url)) echo("</a>"); ?>
                             </td>
                             <td>
                                 <?php echo(date("Y-m-d H:i:s",strtotime($scraper->last_run))." ");

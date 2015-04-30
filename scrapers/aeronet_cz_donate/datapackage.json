@@ -18,19 +18,23 @@
         "fields": [
           {
             "name": "donated",
-            "type": "float"
+            "type": "float",
+            "description": "Donated this month"
           },
           {
             "name": "required",
-            "type": "gloat"
+            "type": "float",
+            "description": "Required this month"
           },
           {
             "name": "date",
-            "type": "datetime"
+            "type": "datetime",
+            "description": "Date and time of the scraping"
           },
           {
             "name": "source_url",
-            "type": "string"
+            "type": "string",
+            "description": "URL of the scraped page"
           }
         ]
       }

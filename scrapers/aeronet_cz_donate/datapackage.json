@@ -1,0 +1,39 @@
+{
+  "title": "Aeronet.cz Donate",
+  "name": "aeronet-cz-donate",
+  "description": "Monthly donations for Aeronet.cz as reported by the website.",
+  "licenses": [
+    {
+      "url": "",
+      "name": "",
+      "id": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data",
+      "path": "data.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "donated",
+            "type": "float"
+          },
+          {
+            "name": "required",
+            "type": "gloat"
+          },
+          {
+            "name": "date",
+            "type": "datetime"
+          },
+          {
+            "name": "source_url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

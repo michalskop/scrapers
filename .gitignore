@@ -1,0 +1,9 @@
+dev/
+smarty/templates_c/
+smarty/cache/
+*~lock*
+__pycache__/*
+secret.php
+secret.py
+scrapers.json
+scrapers/aeronet_cz_donate/current_url.py

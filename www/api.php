@@ -158,7 +158,7 @@ if (isset($_REQUEST['name']))
 if (isset($_REQUEST['description']))
     $scraper->description = $_REQUEST['description'];
 if (isset($_REQUEST['url']))
-    $scraper->name = $_REQUEST['url'];
+    $scraper->url = $_REQUEST['url'];
     
     //note: 2015-04-29T15:16:55Z
 

@@ -55,7 +55,7 @@
             "name": "scraped",
             "type": "datetime",
             "description": "Date and time of scraping"
-          },
+          }
         ]
       }
     }

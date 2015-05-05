@@ -64,9 +64,9 @@ usort($scrapers, 'sort_objects');
                             <td>
                                 <?php 
                                   if (isset($scraper->statistics->ok))
-                                    echo("<span class='badge text-success'>".$scraper->statistics->ok."</span>, ");
+                                    echo("<span class='badge text-success'>".$scraper->statistics->ok."</span> ");
                                   if (isset($scraper->statistics->failed))
-                                    echo("<span class='badge text-danger'>".$scraper->statistics->failed."</span>, ");
+                                    echo("<span class='badge text-danger'>".$scraper->statistics->failed."</span> ");
                                   if (isset($scraper->statistics->unknown))
                                     echo("<span class='badge text-muted'>".$scraper->statistics->unknown."</span>");
                                     

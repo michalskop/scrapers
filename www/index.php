@@ -58,7 +58,8 @@ usort($scrapers, 'sort_objects');
                             </td>
                             <td>
                                 <?php echo(date("Y-m-d H:i:s",strtotime($scraper->last_run))." ");
-                                if ($scraper->last_status == 'ok') echo("<i class='fa fa-clock-o fa-1x'></i> "); elseif ($scraper->last_status == 'failed') { echo("<i class='fa  fa-exclamation-circle fa-1x'></i> "); if (isset($scraper->last_message)) echo($scraper->last_message);} else  echo("<i class='fa fa-question fa-1x'></i> "); ?>
+                                if ($scraper->last_status == 'ok') echo("<i class='fa fa-check fa-1x'></i> "); elseif ($scraper->last_status == 'failed') { echo("<i class='fa  fa-exclamation-circle fa-1x'></i> "); if (isset($scraper->last_message)) echo($scraper->last_message);} else  echo("<i class='fa fa-question fa-1x'></i> "); ?>
+                                
                             </td>
                             <td>
                                 <?php 

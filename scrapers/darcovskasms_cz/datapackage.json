@@ -1,0 +1,63 @@
+{
+  "title": "DMS'",
+  "name": "darcovskasms-cz",
+  "description": "Number of DMS' sent to NGOs daily.",
+  "licenses": [
+    {
+      "url": "",
+      "name": "",
+      "id": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data",
+      "path": "data.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "project",
+            "type": "string",
+            "description": "Project name"
+          },
+          {
+            "name": "organization",
+            "type": "string",
+            "description": "Organization name"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "DMS code"
+          },
+          {
+            "name": "link",
+            "type": "string",
+            "description": "Partial link"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "description": "Date of donation"
+          },
+          {
+            "name": "dms",
+            "type": "integer",
+            "description": "Number od DMS'"
+          },
+          {
+            "name": "total",
+            "type": "integer",
+            "description": "Total number of DMS' (till time of scraping)"
+          },
+          {
+            "name": "scraped",
+            "type": "datetime",
+            "description": "Date and time of scraping"
+          },
+        ]
+      }
+    }
+  ]
+}

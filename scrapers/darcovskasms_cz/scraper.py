@@ -5,6 +5,7 @@ import csv
 import re
 import datetime
 import urllib
+import current_url
 
 v2c = {} #column number <- variable
 existing = {}

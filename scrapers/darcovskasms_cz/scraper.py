@@ -6,6 +6,7 @@ import re
 import datetime
 import urllib
 import current_url
+import os
 
 v2c = {} #column number <- variable
 existing = {}

@@ -16,6 +16,7 @@ usort($scrapers, 'sort_objects');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Scrapers">
     <meta name="author" content="Michal Škop">
+    <meta http-equiv="refresh" content="300">
     <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
     
 

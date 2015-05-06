@@ -10,7 +10,9 @@ import current_url
 v2c = {} #column number <- variable
 existing = {}
 i = 0
-with open("data.csv") as fin:
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, "data.csv")
+with open(filename) as fin:
     csvr = csv.reader(fin)
     for row in csvr:
         if i == 0:

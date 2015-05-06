@@ -98,6 +98,8 @@ if r.status_code == requests.codes.ok:
                     csvw = csv.writer(fout)
                     for r in nrows:
                         csvw.writerow([r['project'],r['organization'],r['code'],r['link'],r['date'],r['dms'],r['total'],t])
+                o["status"] = "ok"
+                o["message"] = "OK"
             else:
                 o["status"] = "failed"
                 o["message"] = "page:" + campaign.link + " " + r.status_code

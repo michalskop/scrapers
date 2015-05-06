@@ -94,7 +94,9 @@ if r.status_code == requests.codes.ok:
                             match = re.search("([0-9]{1,})",domtree.xpath('//h3')[1].text)
                             nrow['total'] = match.group(1)
                             nrows.append(nrow)
-                with open("data.csv","a") as fout:
+                dir = os.path.dirname(__file__)
+                filename = os.path.join(dir, "data.csv")
+                with open(filename,"a") as fout:
                     csvw = csv.writer(fout)
                     for r in nrows:
                         csvw.writerow([r['project'],r['organization'],r['code'],r['link'],r['date'],r['dms'],r['total'],t])

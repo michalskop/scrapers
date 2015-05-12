@@ -1,0 +1,58 @@
+{
+  "title": "DMS'",
+  "name": "blog-aktualne-cz",
+  "description": "Numbers of readers of Aktualne.cz blogs.",
+  "licenses": [
+    {
+      "url": "",
+      "name": "",
+      "id": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data",
+      "path": "data.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "header",
+            "type": "string",
+            "description": "Blogpost header"
+          },
+          {
+            "name": "author",
+            "type": "string",
+            "description": "Author of blog"
+          },
+          {
+            "name": "total",
+            "type": "integer",
+            "description": "Number of readers"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "description": "Published date"
+          },
+          {
+            "name": "rank",
+            "type": "integer",
+            "description": "Current rank on the blogs' page"
+          },
+          {
+            "name": "link",
+            "type": "string",
+            "description": "Blogpost link"
+          },
+          {
+            "name": "scraped",
+            "type": "datetime",
+            "description": "Date and time of scraping"
+          }
+        ]
+      }
+    }
+  ]
+}

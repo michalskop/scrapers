@@ -1,7 +1,7 @@
 {
-  "title": "Tesco products",
-  "name": "itesco-cz",
-  "description": "Products and prices from Tesco.cz",
+  "title": "DMS'",
+  "name": "blog-aktualne-cz",
+  "description": "Numbers of readers of Aktualne.cz blogs.",
   "licenses": [
     {
       "url": "",
@@ -17,69 +17,39 @@
       "schema": {
         "fields": [
           {
-            "name": "id",
+            "name": "header",
+            "type": "string",
+            "description": "Blogpost header"
+          },
+          {
+            "name": "author",
+            "type": "string",
+            "description": "Author of blog"
+          },
+          {
+            "name": "total",
             "type": "integer",
-            "description": "Product ID"
-          },
-          {
-            "name": "group",
-            "type": "string",
-            "description": "Group of products"
-          },
-          {
-            "name": "group_link",
-            "type": "string",
-            "description": "Link to group of products"
-          },
-          {
-            "name": "subcategory",
-            "type": "string",
-            "description": "Subcategory of products"
-          },
-          {
-            "name": "subcategory_link",
-            "type": "string",
-            "description": "Link to subcategory of products"
-          },
-          {
-            "name": "name",
-            "type": "string",
-            "description": "Name of the product"
-          },
-          {
-            "name": "link",
-            "type": "string",
-            "description": "Link to the product"
-          },
-          {
-            "name": "price",
-            "type": "float",
-            "description": "Price of the product"
-          },
-          {
-            "name": "unit_price",
-            "type": "float",
-            "description": "Unit price of the product"
-          },
-          {
-            "name": "unit",
-            "type": "string",
-            "description": "Unit of the product"
+            "description": "Number of readers"
           },
           {
             "name": "date",
             "type": "datetime",
-            "description": "Scraped date"
+            "description": "Published date"
+          },
+          {
+            "name": "rank",
+            "type": "integer",
+            "description": "Current rank on the blogs' page"
+          },
+          {
+            "name": "link",
+            "type": "string",
+            "description": "Blogpost link"
           },
           {
             "name": "scraped",
             "type": "datetime",
             "description": "Date and time of scraping"
-          },
-          {
-            "name": "promo",
-            "type": "string",
-            "description": "Promo description, if any"
           }
         ]
       }

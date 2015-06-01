@@ -1,0 +1,88 @@
+{
+  "title": "Tesco products",
+  "name": "itesco-cz",
+  "description": "Products and prices from Tesco.cz",
+  "licenses": [
+    {
+      "url": "",
+      "name": "",
+      "id": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data",
+      "path": "data.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Product ID"
+          },
+          {
+            "name": "group",
+            "type": "string",
+            "description": "Group of products"
+          },
+          {
+            "name": "group_link",
+            "type": "string",
+            "description": "Link to group of products"
+          },
+          {
+            "name": "subcategory",
+            "type": "string",
+            "description": "Subcategory of products"
+          },
+          {
+            "name": "subcategory_link",
+            "type": "string",
+            "description": "Link to subcategory of products"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Name of the product"
+          },
+          {
+            "name": "link",
+            "type": "string",
+            "description": "Link to the product"
+          },
+          {
+            "name": "price",
+            "type": "float",
+            "description": "Price of the product"
+          },
+          {
+            "name": "unit_price",
+            "type": "float",
+            "description": "Unit price of the product"
+          },
+          {
+            "name": "unit",
+            "type": "string",
+            "description": "Unit of the product"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "description": "Scraped date"
+          },
+          {
+            "name": "scraped",
+            "type": "datetime",
+            "description": "Date and time of scraping"
+          },
+          {
+            "name": "promo",
+            "type": "string",
+            "description": "Promo description, if any"
+          }
+        ]
+      }
+    }
+  ]
+}

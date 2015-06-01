@@ -1,7 +1,7 @@
 {
-  "title": "DMS'",
-  "name": "blog-aktualne-cz",
-  "description": "Numbers of readers of Aktualne.cz blogs.",
+  "title": "Tesco products",
+  "name": "itesco-cz",
+  "description": "Products and prices from Tesco.cz",
   "licenses": [
     {
       "url": "",
@@ -17,39 +17,69 @@
       "schema": {
         "fields": [
           {
-            "name": "header",
-            "type": "string",
-            "description": "Blogpost header"
-          },
-          {
-            "name": "author",
-            "type": "string",
-            "description": "Author of blog"
-          },
-          {
-            "name": "total",
+            "name": "id",
             "type": "integer",
-            "description": "Number of readers"
+            "description": "Product ID"
           },
           {
-            "name": "date",
-            "type": "datetime",
-            "description": "Published date"
+            "name": "group",
+            "type": "string",
+            "description": "Group of products"
           },
           {
-            "name": "rank",
-            "type": "integer",
-            "description": "Current rank on the blogs' page"
+            "name": "group_link",
+            "type": "string",
+            "description": "Link to group of products"
+          },
+          {
+            "name": "subcategory",
+            "type": "string",
+            "description": "Subcategory of products"
+          },
+          {
+            "name": "subcategory_link",
+            "type": "string",
+            "description": "Link to subcategory of products"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Name of the product"
           },
           {
             "name": "link",
             "type": "string",
-            "description": "Blogpost link"
+            "description": "Link to the product"
+          },
+          {
+            "name": "price",
+            "type": "float",
+            "description": "Price of the product"
+          },
+          {
+            "name": "unit_price",
+            "type": "float",
+            "description": "Unit price of the product"
+          },
+          {
+            "name": "unit",
+            "type": "string",
+            "description": "Unit of the product"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "description": "Scraped date"
           },
           {
             "name": "scraped",
             "type": "datetime",
             "description": "Date and time of scraping"
+          },
+          {
+            "name": "promo",
+            "type": "string",
+            "description": "Promo description, if any"
           }
         ]
       }

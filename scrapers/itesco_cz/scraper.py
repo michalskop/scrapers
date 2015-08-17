@@ -47,10 +47,10 @@ def single_page(domtree):
         product['name'] = decode_some_html(li.xpath('div/div/div/h2/a/@title')[0])
         product['link'] = li.xpath('div/div/div/h2/a/@href')[0]
         full_price = decode_some_html(li.xpath('div/div/div/div/form/div/p/span')[0].text)
-        product['price'] = full_price.replace('Kč','').strip().replace(',','.').replace(" ","")
+        product['price'] = full_price.replace('Kč','').strip().replace(',','.').replace(u"\u00A0","")
         full_unit_price = decode_some_html(li.xpath('div/div/div/div/form/div/p/span')[1].text).strip()
         up = full_unit_price.split(' ')
-        product['unit_price'] = up[0].strip('(').replace(',','.').replace(" ","")
+        product['unit_price'] = up[0].strip('(').replace(',','.').replace(u"\u00A0","")
         product['unit'] = up[1].strip(')').replace('Kč','').strip('/')
         idd = product['link'].split('/')
         product['id'] = idd[len(idd)-1]
@@ -64,7 +64,7 @@ def single_page(domtree):
 
     return products
 
-o = {"id":"blog_aktualne_cz", "date":t, "key": secret.key}
+o = {"id":"itesco_cz", "date":t, "key": secret.key}
 today = datetime.datetime.now().strftime("%Y-%m-%d")
 last = "?"
 
@@ -145,7 +145,7 @@ try:
                                 r['promo']
                             ])    
                 o["status"] = "ok"
-                o["message"] = "OK"       
+                o["message"] = "OK"      
                 #raise(Exception)
                     
             

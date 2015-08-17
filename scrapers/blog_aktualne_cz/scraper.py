@@ -33,19 +33,23 @@ if r.status_code == requests.codes.ok:
         print("downloading:"+url)
         r = requests.get(url)
         if r.status_code == requests.codes.ok:
-            domtree = html.fromstring(r.content)
-            dli = domtree.xpath('//small[@class="contentitemdate"]')[0].text.replace('.','').split(' ')
-            nli = bytes(domtree.xpath('//small[@class="contentitemviewed"]')[0].text,'iso-8859-1').decode('utf-8').replace('.','').split(' ')
-            item = {
-                'link': url,
-                'header': bytes(domtree.xpath('//h2[@class="nadpis-prispevku"]')[0].text,'iso-8859-1').decode('utf-8'),
-                'author': bytes(domtree.xpath('//h3')[0].text,'iso-8859-1').decode('utf-8'),
-                'date': dli[2] + '-' + dli[1] + '-' + dli[0] + 'T' + dli[4] + ':00',
-                'total': nli[1],
-                'rank': i
-            }
-            data.append(item)
-            i += 1
+            try:
+                domtree = html.fromstring(r.content)
+                dli = domtree.xpath('//small[@class="contentitemdate"]')[0].text.replace('.','').split(' ')
+                nli = bytes(domtree.xpath('//small[@class="contentitemviewed"]')[0].text,'iso-8859-1').decode('utf-8').replace('.','').split(' ')
+                item = {
+                    'link': url,
+                    'header': bytes(domtree.xpath('//h2[@class="nadpis-prispevku"]')[0].text,'iso-8859-1').decode('utf-8'),
+                    'author': bytes(domtree.xpath('//meta/@content')[0],'iso-8859-1').decode('utf-8'),
+                    'date': dli[2] + '-' + dli[1] + '-' + dli[0] + 'T' + dli[4] + ':00',
+                    'total': nli[1],
+                    'rank': i
+                }
+                data.append(item)
+                i += 1
+            except:
+                o["status"] = "failed"
+                o["message"] = "page:" + url + " " + r.status_code
         else:
             o["status"] = "failed"
             o["message"] = "page:" + url + " " + r.status_code

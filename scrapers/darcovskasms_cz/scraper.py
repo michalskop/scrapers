@@ -11,7 +11,7 @@ import os
 v2c = {} #column number <- variable
 existing = {}
 i = 0
-dir = os.path.dirname(__file__)
+dir = os.path.dirname("__file__")
 filename = os.path.join(dir, "data.csv")
 with open(filename) as fin:
     csvr = csv.reader(fin)
@@ -97,7 +97,7 @@ if r.status_code == requests.codes.ok:
                             match = re.search("([0-9]{1,})",domtree.xpath('//h3')[1].text)
                             nrow['total'] = match.group(1)
                             nrows.append(nrow)
-                dir = os.path.dirname(__file__)
+                dir = os.path.dirname("__file__")
                 filename = os.path.join(dir, "data.csv")
                 with open(filename,"a") as fout:
                     csvw = csv.writer(fout)

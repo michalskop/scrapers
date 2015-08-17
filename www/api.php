@@ -153,13 +153,16 @@ if (!isset($scrapers->$_REQUEST['id']))
     $scrapers->$_REQUEST['id'] = new stdClass();
 $scraper = $scrapers->$_REQUEST['id'];
 
+if (isset($_REQUEST['id']))
+    $scraper->id = $_REQUEST['id'];
+
 if (isset($_REQUEST['name']))
     $scraper->name = $_REQUEST['name'];
 if (isset($_REQUEST['description']))
     $scraper->description = $_REQUEST['description'];
 if (isset($_REQUEST['url']))
     $scraper->url = $_REQUEST['url'];
-    
+   
     //note: 2015-04-29T15:16:55Z
 
 if (isset($_REQUEST['date']) and (check_time($_REQUEST['date'])))

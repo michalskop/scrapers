@@ -47,7 +47,7 @@ usort($scrapers, 'sort_objects');
                     <th>Statistics</th>
                 </tr>
                 <?php foreach ($scrapers as $scraper) { ?>
-                    <?php if(isset($scraper->state) and ($scraper->state != 'inactive')) { ?>
+                    <?php if (!(isset($scraper->state) and ($scraper->state == 'inactive'))) { ?>
                         <tr class="
                             <?php if ($scraper->last_status == 'ok') echo('success'); elseif ($scraper->last_status == 'failed') echo('danger'); ?>                 
                         ">

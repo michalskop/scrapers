@@ -121,7 +121,7 @@ try:
                 
                 
                 
-                dir = os.path.dirname("__file__")
+                dir = os.path.dirname(__file__)
                 filename = os.path.join(dir, "data.csv")
                 with open(filename,"a") as fout:
                     csvw = csv.writer(fout)

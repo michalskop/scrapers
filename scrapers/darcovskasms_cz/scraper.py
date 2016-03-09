@@ -11,22 +11,24 @@ import os
 v2c = {} #column number <- variable
 existing = {}
 i = 0
-dir = os.path.dirname("__file__")
+dir = os.path.dirname(__file__)
 filename = os.path.join(dir, "data.csv")
-with open(filename) as fin:
+#print(filename)
+#raise(Exception)
+with open(filename,"r") as fin:
     csvr = csv.reader(fin)
-    for row in csvr:
+    for r in csvr:
         if i == 0:
             j = 0
-            for item in row:
+            for item in r:
                 v2c[item] = j
                 j += 1
         else:
             try:
-                existing[row[v2c['code']]]
+                existing[r[v2c['code']]]
             except:
-                existing[row[v2c['code']]] = {}    
-            existing[row[v2c['code']]][row[v2c['date']]] = True
+                existing[r[v2c['code']]] = {}    
+            existing[r[v2c['code']]][r[v2c['date']]] = True
         i += 1
 
 url = "http://www.darcovskasms.cz/nno/prehled-pro-nno.html"
@@ -97,8 +99,9 @@ if r.status_code == requests.codes.ok:
                             match = re.search("([0-9]{1,})",domtree.xpath('//h3')[1].text)
                             nrow['total'] = match.group(1)
                             nrows.append(nrow)
-                dir = os.path.dirname("__file__")
-                filename = os.path.join(dir, "data.csv")
+                dirr = os.path.dirname(__file__)
+                filename = os.path.join(dirr, "data.csv")
+#                print(filename)
                 with open(filename,"a") as fout:
                     csvw = csv.writer(fout)
                     for r in nrows:

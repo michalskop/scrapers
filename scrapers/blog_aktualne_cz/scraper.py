@@ -53,7 +53,7 @@ if r.status_code == requests.codes.ok:
         else:
             o["status"] = "failed"
             o["message"] = "page:" + url + " " + r.status_code
-    dir = os.path.dirname("__file__")
+    dir = os.path.dirname(__file__)
     filename = os.path.join(dir, "data.csv")
     with open(filename,"a") as fout:
         csvw = csv.writer(fout)

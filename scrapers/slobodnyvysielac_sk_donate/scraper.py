@@ -22,7 +22,7 @@ t = "%s%+03d:%02d" % (dtnow.isoformat(), hh, mm)
 print(os.path.dirname(sys.argv[0]))
 print('dir',os.path.dirname(__file__))
 
-o = {"id":"slobodnyvysielac-sk-donate", "date":t, "key": secret.key}
+o = {"id":"slobodnyvysielac_sk_donate", "date":t, "key": secret.key}
 if r.status_code == requests.codes.ok:
     match1 = re.search('"},{"v":([0-9.]{1,})',r.text)
     match2 = re.search('],"max":([0-9.]{1,})',r.text)

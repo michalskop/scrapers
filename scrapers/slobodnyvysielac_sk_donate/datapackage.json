@@ -1,0 +1,43 @@
+{
+  "title": "SlobodnyVysielac.sk Donate",
+  "name": "slobodnyvysielac-sk-donate",
+  "description": "Monthly donations for SlobodnyVysielac.sk as reported by the website.",
+  "licenses": [
+    {
+      "url": "",
+      "name": "",
+      "id": ""
+    }
+  ],
+  "resources": [
+    {
+      "name": "Data",
+      "path": "data.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "donated",
+            "type": "float",
+            "description": "Donated this month"
+          },
+          {
+            "name": "required",
+            "type": "float",
+            "description": "Required this month"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "description": "Date and time of the scraping"
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "description": "URL of the scraped page"
+          }
+        ]
+      }
+    }
+  ]
+}
